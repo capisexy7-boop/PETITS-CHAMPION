@@ -1,4 +1,4 @@
-package com.example.petits_champions
+package com.sanfo.petitschampions
 
 import android.speech.tts.TextToSpeech
 import io.flutter.embedding.android.FlutterActivity

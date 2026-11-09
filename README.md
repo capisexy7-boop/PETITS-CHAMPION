@@ -53,7 +53,7 @@ Dépendances Flutter :
 
 Cette version reste à tester avec des familles avant diffusion. Le parcours de 30 jours varie entre des quiz de lettres, de couleurs et de découverte ; il ne s'agit pas encore de leçons progressives spécifiques à chaque journée. La vérification de l'espace parent est une barrière simple, et non une protection forte contre un enfant qui connaît la réponse. Les activités mathématiques couvrent les opérations, le comptage, la comparaison, les chiffres, les formes et les suites ; leur contenu reste introductif. Les catégories de vocabulaire restent limitées et doivent être enrichies. Les phrases et le vocabulaire doivent être relus par des locuteurs compétents avant diffusion publique. L'audio dépend des voix présentes sur l'appareil. Les statistiques restent locales à l'appareil.
 
-La publication Google Play n'est pas encore préparée : l'identifiant Android `com.example.petits_champions` est un identifiant provisoire, aucune clé de production ni politique de confidentialité n'est fournie, et la fiche Play, les déclarations Families/Data safety et les tests fermés restent à faire. Le projet refuse maintenant de produire un build release sans la signature de production configurée.
+La publication Google Play n'est pas encore préparée : l'identifiant Android choisi est `com.sanfo.petitschampions`. La clé de production doit rester dans un stockage sécurisé, et la politique de confidentialité, la fiche Play, les déclarations Families/Data safety et les tests fermés restent à faire. Le projet refuse maintenant de produire un build release sans la signature de production configurée.
 
 ## Prochaines étapes recommandées
 
