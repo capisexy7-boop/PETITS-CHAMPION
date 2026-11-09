@@ -33,6 +33,10 @@ Application Flutter éducative destinée aux jeunes enfants de 1 à 5 ans.
 
 Les builds release exigent une clé de signature appartenant au propriétaire du projet ; aucune clé debug ou temporaire n'est utilisée. Configurer les variables d'environnement `PETITS_CHAMPIONS_STORE_FILE`, `PETITS_CHAMPIONS_STORE_PASSWORD`, `PETITS_CHAMPIONS_KEY_ALIAS` et `PETITS_CHAMPIONS_KEY_PASSWORD` dans l'environnement de build sécurisé, puis lancer `flutter build appbundle --release`. Ne pas placer le fichier de clé ni ses mots de passe dans le dépôt. La clé doit être sauvegardée de manière sécurisée : sa perte peut empêcher les mises à jour de l'application.
 
+### Compilation avec Codemagic
+
+Le workflow `codemagic.yaml` crée un App Bundle Android signé après les tests Flutter. Dans les variables d'environnement de l'application Codemagic, créer le groupe secret `android_signing` avec `PETITS_CHAMPIONS_STORE_PASSWORD`, `PETITS_CHAMPIONS_KEY_ALIAS`, `PETITS_CHAMPIONS_KEY_PASSWORD` et `PETITS_CHAMPIONS_KEYSTORE_BASE64`. La dernière variable contient le fichier JKS encodé en Base64 ; le workflow le reconstitue uniquement sur la machine de compilation. Ne jamais ajouter le keystore, son contenu Base64 ou ses mots de passe à Git. Le workflow utilise `mac_mini_m2` afin de consommer le quota mensuel de minutes macOS inclus dans le forfait individuel ; vérifier les tarifs Codemagic avant de lancer une compilation si le quota est épuisé.
+
 Dépendances Flutter :
 - `shared_preferences` : sauvegarde locale.
 - La prononciation Android utilise le moteur natif Text-to-Speech ; aucune voix préenregistrée n'est incluse.
